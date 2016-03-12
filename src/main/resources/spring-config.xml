@@ -32,8 +32,8 @@
 <!--    <mongo:mongo id="mongo" />-->
     <!-- <mongo:db-factory host="localhost" port="27017" dbname="test" />  -->
     <bean id="mongoClient" class="org.springframework.data.mongodb.core.MongoFactoryBean">
-        <property name="host" value="zldv3465.vci.att.com" />
-        <property name="port" value="37017" />
+        <property name="host" value="storage.etunkara.info" />
+        <property name="port" value="27017" />
     </bean>
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
         <constructor-arg name="mongo" ref="mongoClient"  />
@@ -44,7 +44,7 @@
     <!-- redis connection configuration -->
     <bean id="jedisConnectionFactory" 
         class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory" 
-        p:host-name="zldv3465.vci.att.com" 
+        p:host-name="storage.etunkara.info" 
         p:port="16379" />
      <!--redis template definition -->
     <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate" p:connection-factory-ref="jedisConnectionFactory"/>
