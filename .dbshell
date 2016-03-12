@@ -1,0 +1,15 @@
+use archivedb
+db.archive.find({})
+db.archive.count({})
+db.archive.remove({})
+db.archive.count({})
+show dbs
+use archivedb
+show collections
+db.archive.count({})
+db.archive.remove({})
+db.archive.count({})
+use archivedb
+db.archive.count({})
+use archivedb
+db.archive.count({})
