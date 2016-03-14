@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.att.archive.restful.service.ArchiveServiceTest" time="0.263" tests="11" errors="1" skipped="0" failures="3">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.73-b02"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/ebrimatunkara/development/projects/archieve-data-rest"/>
+    <property name="java.runtime.version" value="1.8.0_73-b02"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/t7/562gh5z93yb0zxl_vxb9vn3c0000gn/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="maven.ext.class.path" value="/Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/NetBeans/java/maven-nblib/netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="/Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/NetBeans/java/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/ebrimatunkara/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.11.3"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/ebrimatunkara"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="ebrimatunkara"/>
+    <property name="java.class.path" value="/Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/NetBeans/java/maven/boot/plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/NetBeans/java/maven-nblib/netbeans-eventspy.jar install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_73"/>
+    <property name="java.ext.dirs" value="/Users/ebrimatunkara/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/NetBeans/java/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testFindArchives_String_String" classname="com.att.archive.restful.service.ArchiveServiceTest" time="0.007"/>
+  <testcase name="testFindAll_List" classname="com.att.archive.restful.service.ArchiveServiceTest" time="0.088">
+    <failure message="expected:&lt;null&gt; but was:&lt;[]&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<null> but was:<[]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.att.archive.restful.service.ArchiveServiceTest.testFindAll_List(ArchiveServiceTest.java:82)
+]]></failure>
+    <system-out><![CDATA[22:33:14.238 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.att.archive.restful.service.ArchiveServiceTest]
+22:33:14.239 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.att.archive.restful.service.ArchiveServiceTest]
+22:33:14.239 [main] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@757942a1 testClass = ArchiveServiceTest, testInstance = com.att.archive.restful.service.ArchiveServiceTest@7668d560, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+22:33:14.239 [main] DEBUG o.s.t.c.c.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+22:33:14.239 [main] DEBUG o.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@772485dd size = 1, parentContextCount = 0, hitCount = 1, missCount = 1]
+22:33:14.239 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'com.att.archive.restful.service.ArchiveServiceTest': AutowiredFieldElement for com.att.archive.restful.service.ArchiveService com.att.archive.restful.service.ArchiveServiceTest.archiveService
+22:33:14.239 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'archiveService'
+22:33:14.239 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'com.att.archive.restful.service.ArchiveServiceTest': AutowiredFieldElement for com.att.archive.restful.util.IArchiver com.att.archive.restful.service.ArchiveServiceTest.archiver
+22:33:14.239 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'archiver'
+22:33:14.240 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test method: context [DefaultTestContext@757942a1 testClass = ArchiveServiceTest, testInstance = com.att.archive.restful.service.ArchiveServiceTest@7668d560, testMethod = testFindAll_List@ArchiveServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+findAll
+22:33:14.279 [main] DEBUG o.s.d.m.r.query.MongoQueryCreator - Created query Query: { "composites" : { }}, Fields: null, Sort: null
+22:33:14.285 [main] DEBUG o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class interface java.util.Map for index information.
+22:33:14.285 [main] DEBUG o.s.data.mongodb.core.MongoTemplate - find using query: { "composites" : { }} fields: null for class: class com.att.archive.restful.model.Archive in collection: archive
+22:33:14.288 [main] DEBUG o.s.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[archiveDb]
+22:33:14.322 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test method: context [DefaultTestContext@757942a1 testClass = ArchiveServiceTest, testInstance = com.att.archive.restful.service.ArchiveServiceTest@7668d560, testMethod = testFindAll_List@ArchiveServiceTest, testException = java.lang.AssertionError: expected:<null> but was:<[]>, mergedContextConfiguration = [MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+]]></system-out>
+  </testcase>
+  <testcase name="testFind" classname="com.att.archive.restful.service.ArchiveServiceTest" time="0.01"/>
+  <testcase name="testSave_Archive" classname="com.att.archive.restful.service.ArchiveServiceTest" time="0.022"/>
+  <testcase name="testFindArchives_3args" classname="com.att.archive.restful.service.ArchiveServiceTest" time="0.094"/>
+  <testcase name="testFindArchives_4args" classname="com.att.archive.restful.service.ArchiveServiceTest" time="0.007">
+    <failure type="java.lang.AssertionError:">java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at com.att.archive.restful.service.ArchiveServiceTest.testFindArchives_4args(ArchiveServiceTest.java:230)
+</failure>
+    <system-out><![CDATA[22:33:14.458 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.att.archive.restful.service.ArchiveServiceTest]
+22:33:14.458 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.att.archive.restful.service.ArchiveServiceTest]
+22:33:14.458 [main] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@757942a1 testClass = ArchiveServiceTest, testInstance = com.att.archive.restful.service.ArchiveServiceTest@9ec531, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+22:33:14.458 [main] DEBUG o.s.t.c.c.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+22:33:14.458 [main] DEBUG o.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@772485dd size = 1, parentContextCount = 0, hitCount = 5, missCount = 1]
+22:33:14.458 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'com.att.archive.restful.service.ArchiveServiceTest': AutowiredFieldElement for com.att.archive.restful.service.ArchiveService com.att.archive.restful.service.ArchiveServiceTest.archiveService
+22:33:14.458 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'archiveService'
+22:33:14.459 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'com.att.archive.restful.service.ArchiveServiceTest': AutowiredFieldElement for com.att.archive.restful.util.IArchiver com.att.archive.restful.service.ArchiveServiceTest.archiver
+22:33:14.459 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'archiver'
+22:33:14.459 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test method: context [DefaultTestContext@757942a1 testClass = ArchiveServiceTest, testInstance = com.att.archive.restful.service.ArchiveServiceTest@9ec531, testMethod = testFindArchives_4args@ArchiveServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+22:33:14.462 [main] DEBUG o.s.d.m.r.query.MongoQueryCreator - Created query Query: { "createdOn" : { "$gt" : { "$date" : "2015-10-25T19:08:56.000Z"} , "$lt" : { "$date" : "2015-12-04T19:08:56.000Z"}} , "type" : "bucket" , "name" : "TICKET_TYPE"}, Fields: null, Sort: null
+22:33:14.464 [main] DEBUG o.s.data.mongodb.core.MongoTemplate - find using query: { "createdOn" : { "$gt" : { "$date" : "2015-10-25T19:08:56.000Z"} , "$lt" : { "$date" : "2015-12-04T19:08:56.000Z"}} , "type" : "bucket" , "name" : "TICKET_TYPE"} fields: null for class: class com.att.archive.restful.model.Archive in collection: archive
+22:33:14.464 [main] DEBUG o.s.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[archiveDb]
+22:33:14.465 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test method: context [DefaultTestContext@757942a1 testClass = ArchiveServiceTest, testInstance = com.att.archive.restful.service.ArchiveServiceTest@9ec531, testMethod = testFindArchives_4args@ArchiveServiceTest, testException = java.lang.AssertionError, mergedContextConfiguration = [MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+]]></system-out>
+  </testcase>
+  <testcase name="testDeleteAll" classname="com.att.archive.restful.service.ArchiveServiceTest" time="0"/>
+  <testcase name="testSave_ArchiveRequest_IArchiver" classname="com.att.archive.restful.service.ArchiveServiceTest" time="0.006">
+    <error type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at com.att.archive.restful.service.ArchiveService.save(ArchiveService.java:64)
+	at com.att.archive.restful.service.ArchiveServiceTest.testSave_ArchiveRequest_IArchiver(ArchiveServiceTest.java:171)
+</error>
+    <system-out><![CDATA[22:33:14.467 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.att.archive.restful.service.ArchiveServiceTest]
+22:33:14.467 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.att.archive.restful.service.ArchiveServiceTest]
+22:33:14.467 [main] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@757942a1 testClass = ArchiveServiceTest, testInstance = com.att.archive.restful.service.ArchiveServiceTest@210f0cc1, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+22:33:14.467 [main] DEBUG o.s.t.c.c.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+22:33:14.468 [main] DEBUG o.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@772485dd size = 1, parentContextCount = 0, hitCount = 7, missCount = 1]
+22:33:14.468 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'com.att.archive.restful.service.ArchiveServiceTest': AutowiredFieldElement for com.att.archive.restful.service.ArchiveService com.att.archive.restful.service.ArchiveServiceTest.archiveService
+22:33:14.468 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'archiveService'
+22:33:14.468 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'com.att.archive.restful.service.ArchiveServiceTest': AutowiredFieldElement for com.att.archive.restful.util.IArchiver com.att.archive.restful.service.ArchiveServiceTest.archiver
+22:33:14.468 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'archiver'
+22:33:14.468 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test method: context [DefaultTestContext@757942a1 testClass = ArchiveServiceTest, testInstance = com.att.archive.restful.service.ArchiveServiceTest@210f0cc1, testMethod = testSave_ArchiveRequest_IArchiver@ArchiveServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+save
+22:33:14.469 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test method: context [DefaultTestContext@757942a1 testClass = ArchiveServiceTest, testInstance = com.att.archive.restful.service.ArchiveServiceTest@210f0cc1, testMethod = testSave_ArchiveRequest_IArchiver@ArchiveServiceTest, testException = java.lang.NullPointerException, mergedContextConfiguration = [MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+]]></system-out>
+  </testcase>
+  <testcase name="testFindArchives_Date_String" classname="com.att.archive.restful.service.ArchiveServiceTest" time="0.002"/>
+  <testcase name="testFindAll_0args" classname="com.att.archive.restful.service.ArchiveServiceTest" time="0.004">
+    <failure message="expected:&lt;null&gt; but was:&lt;[com.att.archive.restful.model.Archive@6d868997]&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<null> but was:<[com.att.archive.restful.model.Archive@6d868997]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.att.archive.restful.service.ArchiveServiceTest.testFindAll_0args(ArchiveServiceTest.java:68)
+]]></failure>
+    <system-out><![CDATA[22:33:14.475 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.att.archive.restful.service.ArchiveServiceTest]
+22:33:14.475 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.att.archive.restful.service.ArchiveServiceTest]
+22:33:14.475 [main] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@757942a1 testClass = ArchiveServiceTest, testInstance = com.att.archive.restful.service.ArchiveServiceTest@55caeb35, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+22:33:14.475 [main] DEBUG o.s.t.c.c.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+22:33:14.475 [main] DEBUG o.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@772485dd size = 1, parentContextCount = 0, hitCount = 9, missCount = 1]
+22:33:14.475 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'com.att.archive.restful.service.ArchiveServiceTest': AutowiredFieldElement for com.att.archive.restful.service.ArchiveService com.att.archive.restful.service.ArchiveServiceTest.archiveService
+22:33:14.475 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'archiveService'
+22:33:14.476 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'com.att.archive.restful.service.ArchiveServiceTest': AutowiredFieldElement for com.att.archive.restful.util.IArchiver com.att.archive.restful.service.ArchiveServiceTest.archiver
+22:33:14.476 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'archiver'
+22:33:14.476 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test method: context [DefaultTestContext@757942a1 testClass = ArchiveServiceTest, testInstance = com.att.archive.restful.service.ArchiveServiceTest@55caeb35, testMethod = testFindAll_0args@ArchiveServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+findAll
+22:33:14.478 [main] DEBUG o.s.data.mongodb.core.MongoTemplate - find using query: { } fields: null for class: class com.att.archive.restful.model.Archive in collection: archive
+22:33:14.478 [main] DEBUG o.s.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[archiveDb]
+22:33:14.479 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test method: context [DefaultTestContext@757942a1 testClass = ArchiveServiceTest, testInstance = com.att.archive.restful.service.ArchiveServiceTest@55caeb35, testMethod = testFindAll_0args@ArchiveServiceTest, testException = java.lang.AssertionError: expected:<null> but was:<[com.att.archive.restful.model.Archive@6d868997]>, mergedContextConfiguration = [MergedContextConfiguration@4a87761d testClass = ArchiveServiceTest, locations = '{classpath*:test-spring-config.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+]]></system-out>
+  </testcase>
+  <testcase name="testFindAll_4args" classname="com.att.archive.restful.service.ArchiveServiceTest" time="0.023"/>
+</testsuite>
