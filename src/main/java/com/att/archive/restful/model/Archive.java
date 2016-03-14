@@ -4,7 +4,6 @@ package com.att.archive.restful.model;
  * data archive is class model
  * @author ebrima
  */
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
