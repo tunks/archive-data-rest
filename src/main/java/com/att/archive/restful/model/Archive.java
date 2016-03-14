@@ -8,6 +8,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.solr.core.mapping.Dynamic;
 
 
 @Document
@@ -15,6 +17,8 @@ public class Archive extends BaseArchive{
     private byte[]  compressedData;
     private String dataFormat;
     private String compressedType;  
+    @Dynamic
+    @Field("dynamicMappedField_*")
     private Set<Map<String,Object>> composites;
 
     public Archive() {

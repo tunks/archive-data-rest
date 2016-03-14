@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.format.annotation.DateTimeFormat;
 
 /**
@@ -14,9 +15,13 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Document
 public class BaseArchive {
     @Id
+    @Field
     private String id;
+    @Field
     private String type;
+    @Field
     private String name;
+    @Field
     @DateTimeFormat(iso=DateTimeFormat.ISO.DATE_TIME)
     private Date createdOn;
     private List content;

@@ -7,14 +7,14 @@ import java.util.Map;
 import java.util.Set;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.solr.repository.SolrCrudRepository;
 
 /**
  * Archive repository interface
  * @author ebrima
  */
 
-public interface ArchiveRepository extends PagingAndSortingRepository<Archive, String> {
+public interface ArchiveRepository extends SolrCrudRepository<Archive, String> {
     public List<Archive> findByType(String name);
     public List<Archive> findByTypeAndName(String type , String name );
     public List<Archive> findByComposites(Map composites);
