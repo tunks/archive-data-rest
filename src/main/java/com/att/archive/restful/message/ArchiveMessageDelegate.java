@@ -1,15 +1,7 @@
 package com.att.archive.restful.message;
 
-import com.att.archive.restful.controller.ArchiveRequest;
-import com.att.archive.restful.service.ArchiveService;
-import com.att.archive.restful.util.DataArchiver;
-import com.att.archive.restful.util.DataHelper;
+import com.att.archive.restful.service.ServiceBase;
 import com.att.archive.restful.util.IArchiver;
-import com.google.gson.Gson;
-import com.google.gson.JsonParser;
-import com.google.gson.JsonObject;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 import java.io.Serializable;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class ArchiveMessageDelegate  implements MessageDelegate{
     @Autowired
-    private ArchiveService archiveService;
+    private ServiceBase archiveService;
     @Autowired
     private IArchiver archiver;
     
@@ -52,9 +44,10 @@ public class ArchiveMessageDelegate  implements MessageDelegate{
         System.out.println("save turf save message received 5;");
     }   
     //save archive
+    //TODO
     private void saveArchive(String message){
-       ArchiveRequest request = DataHelper.jsonToObject(message,ArchiveRequest.class);
-       archiveService.save(request, archiver);
+       //ArchiveRequest request = DataHelper.jsonToObject(message,ArchiveRequest.class);
+       //archiveService.save(request, archiver);
 
     }
 } 

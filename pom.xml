@@ -6,7 +6,8 @@
     <groupId>com.att</groupId>
     <artifactId>archive-data-rest</artifactId>
     <version>0.1.0</version>
-
+    <name>archieve-data-rest</name>
+    
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -16,7 +17,7 @@
     <properties>
         <java.version>1.7</java.version>
     </properties>
-
+   
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -32,22 +33,42 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <!--<scope>provided</scope> -->
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+  
+<!--     <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope> 
+        </dependency>-->
+        
         <!-- spring solr dependecncy-->
         <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-solr</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-solr</artifactId>
         </dependency>
+        
+          <dependency>
+	     <groupId>org.springframework.boot</groupId>
+	     <artifactId>spring-boot-starter-jetty</artifactId>
+	 </dependency>
+        <!-- json libraries -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+	    <artifactId>gson</artifactId>	
+          </dependency>
+          
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>	
+        </dependency>
+        
+        <!-- test libraries -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-        </dependency>
+        
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -55,43 +76,78 @@
         </dependency>
         
         <dependency>
-            <groupId>net.jpountz.lz4</groupId>
-            <artifactId>lz4</artifactId>
-            <version>1.3</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.brsanthu</groupId>
-            <artifactId>migbase64</artifactId>
-            <version>2.2</version>
-        </dependency>
-        <!---joda time utilities -->
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-            <version>2.8.1</version>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId> 
+            <scope>test</scope>
         </dependency>
         
-        <dependency>
+        <!---joda time utilities -->
+          <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
+        <!--java j2ee -->      
+<!--        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
         </dependency>
         <dependency>
             <groupId>javax.el</groupId>
             <artifactId>javax.el-api</artifactId>
             <version>3.0.0</version>
+        </dependency>-->
+        
+        <!-- Spring AOP + AspectJ -->
+<!--        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>			
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-instrument</artifactId>
+        </dependency>-->
+
+        <!--        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>-->
     </dependencies>
     
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--                <configuration>
+                    <addResources>true</addResources>
+                    <profiles>
+                        <profile>dev</profile>
+                    </profiles>     
+                </configuration>-->
             </plugin>
         </plugins>
+        <!--
+       <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-surefire-plugin</artifactId>
+           <configuration>
+               <argLine>-javaagent:lib/spring-instrument-4.2.5.RELEASE.jar</argLine>
+           </configuration>
+       </plugin>
+        -->
+
     </build>
-    <name>archieve-data-rest</name>
 </project>

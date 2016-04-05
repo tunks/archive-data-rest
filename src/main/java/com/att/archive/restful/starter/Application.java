@@ -14,15 +14,15 @@ import org.springframework.web.util.UrlPathHelper;
 
 @SpringBootApplication
 @ImportResource("spring-config.xml")
-public class Application { //extends WebMvcConfigurerAdapter
+public class Application extends WebMvcConfigurerAdapter{
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
     
-//     @Override
-//    public void configurePathMatch(PathMatchConfigurer configurer) {
-//        UrlPathHelper urlPathHelper = new UrlPathHelper();
-//        urlPathHelper.setUrlDecode(true);
-//        configurer.setUrlPathHelper(urlPathHelper);
-//    }
+     @Override
+    public void configurePathMatch(PathMatchConfigurer configurer) {
+        UrlPathHelper urlPathHelper = new UrlPathHelper();
+        urlPathHelper.setUrlDecode(true);
+        configurer.setUrlPathHelper(urlPathHelper);
+    }
 }
